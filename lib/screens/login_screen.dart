@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_app/screens/home_screen.dart';
-//import 'package:flutter_social_ui/screens/home_screen.dart';
-//import 'package:flutter_social_ui/widgets/curve_clipper.dart';
+import 'package:social_media_app/widgets/curve_clipper.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -15,12 +14,12 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Container(
+        child: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: <Widget>[
               ClipPath(
-                //clipper: CurveClipper(),
+                clipper: CurveClipper(),
                 child: Image(
                   height: MediaQuery.of(context).size.height / 2.5,
                   width: double.infinity,
