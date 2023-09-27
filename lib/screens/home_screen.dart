@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:social_media_app/data/data.dart';
 import 'package:social_media_app/widgets/following_users.dart';
+import 'package:social_media_app/widgets/post_carousel.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,11 +13,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  late PageController _pageController;
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
+    _pageController = PageController(initialPage: 0, viewportFraction: 0.8);
   }
 
   @override
@@ -28,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen>
         ),
         centerTitle: true,
         title: Text(
-          'FREZY',
+          'FRENZY',
           style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.bold,
@@ -55,8 +59,13 @@ class _HomeScreenState extends State<HomeScreen>
         ),
       ),
       body: ListView(
-        children: const [
-          FollowingUsers(),
+        children: [
+          const FollowingUsers(),
+          PostCarousel(
+            pageController: _pageController,
+            title: 'Post',
+            posts: posts,
+          ),
         ],
       ),
     );
