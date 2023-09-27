@@ -25,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen>
           iconTheme: IconThemeData(
             color: Theme.of(context).primaryColor,
           ),
+          centerTitle: true,
           title: Text(
             'FREZY',
             style: TextStyle(
