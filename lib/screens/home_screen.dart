@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:social_media_app/data/data.dart';
-import 'package:social_media_app/models/user_model.dart';
 import 'package:social_media_app/widgets/following_users.dart';
 
 class HomeScreen extends StatefulWidget {
