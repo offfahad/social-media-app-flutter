@@ -38,14 +38,95 @@ class PostCarousel extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-        )
+        ),
+        Positioned(
+          left: 10.0,
+          right: 10.0,
+          bottom: 10.0,
+          child: Container(
+            padding: const EdgeInsets.all(12.0),
+            height: 110.0,
+            decoration: const BoxDecoration(
+              color: Colors.white54,
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(15.0),
+                bottomRight: Radius.circular(15.0),
+              ),
+            ),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    post.title,
+                    style: const TextStyle(
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  
+                  const SizedBox(
+                    height: 6.0,
+                  ),
+                  Text(
+                    post.location,
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  const SizedBox(
+                    height: 6.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          const Icon(
+                            Icons.favorite,
+                            color: Colors.red,
+                          ),
+                          Text(
+                            post.likes.toString(),
+                            style: const TextStyle(fontSize: 18.0),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 6.0,
+                      ),
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.comment,
+                            color: Theme.of(context).primaryColor,
+                          ),
+                          const SizedBox(
+                            width: 6.0,
+                          ),
+                          Text(
+                            post.comments.toString(),
+                            style: const TextStyle(fontSize: 18.0),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ]),
+          ),
+        ),
       ],
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+    return Column(
+    crossAxisAlignment: CrossAxisAlignment.start, 
+    children: [
       Padding(
         padding: const EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 10.0),
         child: Text(
@@ -57,7 +138,7 @@ class PostCarousel extends StatelessWidget {
           ),
         ),
       ),
-      Container(
+      SizedBox(
         height: 400.0,
         child: PageView.builder(
           controller: pageController,
