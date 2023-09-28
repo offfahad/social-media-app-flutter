@@ -85,7 +85,7 @@ class CustomDrawer extends StatelessWidget {
               const Icon(Icons.account_circle), 'Your Profile', () => Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => const ProfileScreen(),
+                  builder: (_) => ProfileScreen(user: currentUser),
                 ),
               ),),
           _buildDrawerOption(const Icon(Icons.settings), 'Setting', () {}),
