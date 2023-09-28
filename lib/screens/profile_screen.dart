@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_app/models/user_model.dart';
 import 'package:social_media_app/widgets/custom_drawer.dart';
+import 'package:social_media_app/widgets/profile_clipper.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({required this.user, super.key});
@@ -24,11 +25,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Stack(
             alignment: Alignment.center,
             children: [
-              Image(
-                height: 300.0,
-                width: double.infinity,
-                image: AssetImage(widget.user.backgroundImageUrl!),
-                fit: BoxFit.cover,
+              ClipPath(
+                clipper: ProfileClipper(),
+                child: Image(
+                  height: 300.0,
+                  width: double.infinity,
+                  image: AssetImage(widget.user.backgroundImageUrl!),
+                  fit: BoxFit.cover,
+                ),
               ),
               Positioned(
                 top: 50,
