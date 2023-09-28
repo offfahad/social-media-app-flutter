@@ -22,6 +22,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
         children: [
           Stack(
+            alignment: Alignment.center,
             children: [
               Image(
                 height: 300.0,
@@ -39,6 +40,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   iconSize: 30.0,
                   color: Theme.of(context).primaryColor,
                   onPressed: () => _scaffoldKey.currentState!.openDrawer(),
+                ),
+              ),
+              Positioned(
+                bottom: 0.0,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black45,
+                        offset: Offset(0, 2),
+                        blurRadius: 0.6,
+                      ),
+                    ],
+                  ),
+                  child: ClipOval(
+                    child: Image(
+                      height: 120.0,
+                      width: 120,
+                      image: AssetImage(widget.user.profileImageUrl!),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               )
             ],
