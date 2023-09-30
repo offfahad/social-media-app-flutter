@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   letterSpacing: 10.0,
                 ),
               ),
-              const SizedBox(height: 20.0),
+              const SizedBox(height: 30.0),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 child: TextField(

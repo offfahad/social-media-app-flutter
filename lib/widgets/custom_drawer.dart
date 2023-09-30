@@ -69,6 +69,7 @@ class CustomDrawer extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 20,),
           _buildDrawerOption(
             const Icon(Icons.dashboard),
             'Home',
@@ -79,10 +80,11 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
+          
           _buildDrawerOption(const Icon(Icons.chat), 'Chat', () {}),
           _buildDrawerOption(const Icon(Icons.location_on), 'Map', () {}),
           _buildDrawerOption(
-              const Icon(Icons.account_circle), 'Your Profile', () => Navigator.pushReplacement(
+              const Icon(Icons.account_circle), 'Profile', () => Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
                   builder: (_) => ProfileScreen(user: currentUser),

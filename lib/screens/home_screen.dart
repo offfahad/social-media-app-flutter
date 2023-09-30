@@ -49,6 +49,7 @@ class _HomeScreenState extends State<HomeScreen>
           ),
           unselectedLabelStyle: const TextStyle(fontSize: 18.0),
           indicatorWeight: 3.0,
+          indicatorColor: Theme.of(context).primaryColor,
           tabs: const [
             Tab(
               text: 'Trending',
