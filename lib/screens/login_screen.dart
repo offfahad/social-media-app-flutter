@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Text(
-                'FRENZY',
+                'FRIENDZONE',
                 style: TextStyle(
                   color: Theme.of(context).primaryColor,
                   fontSize: 34.0,
@@ -36,40 +36,64 @@ class _LoginScreenState extends State<LoginScreen> {
                   letterSpacing: 10.0,
                 ),
               ),
-              const SizedBox(height: 10.0),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+              const SizedBox(height: 20.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 child: TextField(
+                  cursorColor: Theme.of(context).primaryColor,
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(vertical: 15.0),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 15.0),
                     fillColor: Colors.white,
                     filled: true,
                     hintText: 'Username',
                     prefixIcon: Icon(
                       Icons.account_box,
                       size: 30.0,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).primaryColor,
+                      ), // Change the border color here
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).primaryColor,
+                      ),
                     ),
                   ),
                 ),
               ),
               const SizedBox(height: 10.0),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 child: TextField(
+                  cursorColor: Theme.of(context).primaryColor,
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(vertical: 15.0),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 15.0),
                     fillColor: Colors.white,
                     filled: true,
                     hintText: 'Password',
                     prefixIcon: Icon(
                       Icons.lock,
                       size: 30.0,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).primaryColor,
+                      ), // Change the border color here
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Theme.of(context).primaryColor,
+                      ), // Change the border color when the field is focused
                     ),
                   ),
                   obscureText: true,
                 ),
               ),
-              const SizedBox(height: 40.0),
+              const SizedBox(height: 30.0),
               GestureDetector(
                 onTap: () => Navigator.pushReplacement(
                   context,

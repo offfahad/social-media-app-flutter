@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen>
         ),
         centerTitle: true,
         title: Text(
-          'FRENZY',
+          'FRIENDZONE',
           style: TextStyle(
             color: Theme.of(context).primaryColor,
             fontWeight: FontWeight.bold,
