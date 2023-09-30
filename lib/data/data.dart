@@ -69,8 +69,8 @@ final User currentUser = User(
   profileImageUrl: 'assets/images/user.jpg',
   backgroundImageUrl: 'assets/images/user_background.jpg',
   name: 'Fahad',
-  following: 453,
-  followers: 937,
+  following: 106,
+  followers: 90,
   posts: _yourPosts,
   favorites: _yourFavorites,
 );
