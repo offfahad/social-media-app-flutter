@@ -1,16 +1,15 @@
-# social_media_app
+# FREINDZONE - Social App UI Flutter
 
-A new Flutter project.
+This applications is an implementation of social app design in flutter. Dummy users and posts data classes are used to follow MVC strcuture. API calls to fetch data and login authentication is pending section which will be cover letter.
 
-## Getting Started
+## Funtionalities
 
-This project is a starting point for a Flutter application.
+It has different screens which are fully connected and self made custom designs on images 
+- Login Screen
+- Home Screen
+- Trending Posts Screen
+- Latest Posts Screen
+- Custom Drawer
+- Profile Screen
+- Favorites Posts
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
