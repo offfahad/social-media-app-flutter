@@ -13,3 +13,13 @@ It has different screens which are fully connected and self made custom designs 
 - Profile Screen
 - Favorites Posts
 
+## UI Design 
+
+# Login Screen
+![login](https://github.com/offfahad/social-media-app-flutter/assets/19569802/a78cef9d-aa0c-4d6f-9007-a8eb44273bcd)
+
+# Home Screen
+![home](https://github.com/offfahad/social-media-app-flutter/assets/19569802/4be1aab8-e7bb-42be-bd4e-7db9e6517fa4)
+![home2](https://github.com/offfahad/social-media-app-flutter/assets/19569802/068d9cff-ba59-4137-9304-4d4e383d03ac)
+
+
